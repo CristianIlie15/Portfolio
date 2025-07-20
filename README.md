@@ -1,12 +1,32 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# 💼 Cristian.dev — Personal Portfolio
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Welcome to my developer portfolio! This is a modern, responsive, and animated personal website built with **React**, **TailwindCSS**, and **Framer Motion**.  
+It showcases my work, tech stack, and includes a working contact form, as well as a downloadable resume.
+This project was built to present myself in a stylish, yet functional way to clients, recruiters, and collaborators.
+It's a living project and will continue to evolve with new skills and projects.
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ **React** – UI building
+- ⚡ **Vite** – lightning-fast development
+- 🎨 **Tailwind CSS** – styling utility framework
+- 🎞️ **Framer Motion** – smooth animations
+- 📩 **Formspree** – contact form backend
+- ☁️ **Vercel** – hosting & deployment
+
+---
+
+## ✨ Features
+
+- ✅ Responsive design (mobile-first)
+- ✅ Dark theme feel with accent colors (pink glow aesthetic)
+- ✅ Smooth animations and transitions
+- ✅ Contact form with real-time feedback
+- ✅ Mobile hamburger menu with animation
+- ✅ Downloadable CV (hosted locally)
+
+Feel free to connect with me via the contact form on the website — I’m always open to interesting conversations and collaborations!
+This project is open-source and free to use. If you fork or reuse parts of it, a small credit is appreciated. ❤️
