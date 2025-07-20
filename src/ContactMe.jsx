@@ -66,14 +66,14 @@ export default function ContactMe() {
 
       <motion.form
         onSubmit={handleSubmit}
-        className="backdrop-blur-md bg-white/80 dark:bg-white/10 shadow-2xl rounded-3xl max-w-3xl mx-auto px-8 py-10 md:px-12 md:py-14 flex flex-col gap-6 border border-white/20"
+        className="backdrop-blur-md bg-white/10 dark:bg-white/10 shadow-2xl rounded-3xl max-w-3xl mx-auto px-8 py-10 md:px-12 md:py-14 flex flex-col gap-6 border border-white/20"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         noValidate
       >
         <label className="flex flex-col">
-          <span className="mb-2 font-semibold text-gray-800 dark:text-white font-lora text-lg">
+          <span className="mb-2 font-semibold text-secondaryText dark:text-white font-lora text-lg">
             Name
           </span>
 <input
@@ -90,7 +90,7 @@ export default function ContactMe() {
         </label>
 
         <label className="flex flex-col">
-          <span className="mb-2 font-semibold text-gray-800 dark:text-white font-lora text-lg">
+          <span className="mb-2 font-semibold text-secondaryText dark:text-white font-lora text-lg">
             Email
           </span>
           <input
@@ -106,7 +106,7 @@ export default function ContactMe() {
         </label>
 
         <label className="flex flex-col">
-          <span className="mb-2 font-semibold text-gray-800 dark:text-white font-lora text-lg">
+          <span className="mb-2 font-semibold text-secondaryText dark:text-white font-lora text-lg">
             Message
           </span>
           <textarea
