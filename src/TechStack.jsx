@@ -68,7 +68,7 @@ export default function TechStack() {
       />
 
       <div className="max-w-screen-2xl mx-auto px-6 lg:px-26 mb-10 pb-10  " >
-        <h2 className="text-4xl lg:text-6xl md:text-5xl font-bold text-center mb-16 md:mb-24 lg:mb-30 font-ubuntu md:font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-pink-300 to-yellow-400 mb-16 " id="techstack">
+        <h2 className="text-4xl lg:text-6xl md:text-5xl font-bold text-center mb-16 md:mb-24 lg:mb-30 font-ubuntu md:font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-pink-300 to-yellow-400 mb-16 " >
           Tech Stack
         </h2>
 

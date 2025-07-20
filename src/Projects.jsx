@@ -110,13 +110,7 @@ function Projects() {
               <div className="lg:w-3/5 w-full p-6 md:p-10 space-y-5 bg-gray-900">
                 <h3
                   className="
-    text-2xl md:text-3xl font-semibold font-ubuntu
-    bg-gradient-to-r from-pink-400 to-purple-500 text-transparent bg-clip-text
-    md:text-white md:bg-none md:text-opacity-100
-    md:group-hover:bg-gradient-to-r md:group-hover:from-yellow-300 md:group-hover:via-pink-500 md:group-hover:to-purple-600
-    md:group-hover:text-transparent md:group-hover:bg-clip-text
-    transition duration-300
-  "
+                  text-2xl md:text-3xl font-semibold font-ubuntu bg-gradient-to-r from-pink-400 to-purple-600 text-transparent bg-clip-text md:text-white md:bg-none md:text-opacity-100  md:group-hover:bg-gradient-to-r md:group-hover:from-yellow-300 md:group-hover:via-pink-500 md:group-hover:to-purple-600md:group-hover:text-transparent md:group-hover:bg-clip-texttransition duration-300"
                 >
                   {project.title}
                 </h3>
@@ -125,7 +119,7 @@ function Projects() {
                   {project.description}
                 </p>
 
-                <div className="flex gap-4 text-2xl text-amber-300 mt-4">
+                <div className="flex gap-4 text-2xl md:text-amber-300 mt-4 text-[#fa7ed1fb] ">
                   {project.technologies.map((icon, idx) => (
                     <span
                       key={idx}
