@@ -1,0 +1,187 @@
+@import "tailwindcss";
+@import "./fonts.css";
+
+
+@layer utilities {
+  .font-ubuntu {
+    font-family: "Ubuntu", sans-serif;
+  }
+
+  .font-lora {
+    font-family: "Lora", serif;
+  }
+
+  .font-lexend {
+    font-family: "Lexend Deca", sans-serif;
+  } 
+
+  .font-chonburi {
+    font-family: "Chonburi", cursive;
+  }
+    .bg-gradient-filler {
+    background-image: linear-gradient(to bottom, #020c2c, #031546, #05174c, #071a51, #091d57, #0b2062, #0e226c, #132477, #1f2589, #4a218d, #4120ab, #5516ba);
+  }
+  .bg-gradient2 {
+background: linear-gradient(180deg, #5616BA, #0F043A);
+  }
+}
+
+
+@theme {
+  --color-primaryText: #f0f5f5 ;
+  --color-secondaryText: #f0fafc;
+  --color-text3 :#dfe4e6;
+  --color-boxColor1: #2a224a;
+  --color-boxColor2: #2f2f82;
+  --color-pink1: #bb44f3;
+  --color-blue1: #0865bd;
+}
+
+:root {
+  --gradient-main: linear-gradient(90deg, #0865bd, #663bd3, #f344c7);
+
+}
+
+.text-gradient-main {
+  background: var(--gradient-main);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.border-boxColor2 {
+  border: 2px solid var(--color-boxColor2);
+}
+
+.tech-glow-sm {
+  animation: pulse-soft 3s ease-in-out infinite;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.tech-glow-sm:hover {
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.3) !important;
+  transform: scale(1.08);
+}
+
+
+@keyframes softBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); 
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+        @keyframes pulse-soft {
+          0%, 100% {
+            transform: scale(1);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+          }
+          50% {
+            transform: scale(1.03);
+            box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+          }
+        }
+
+
+/* Bounce on container */
+.bounce {
+  animation-name: softBounce;
+  animation-duration: 3.2s; /* poți schimba viteza aici */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+/* Spin on icon */
+.spin {
+  animation-name: spin;
+  animation-duration: 0.57s; 
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: paused; /* stop spin by default */
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* start spi on hover */
+.spin-wrapper:hover .spin {
+  animation-play-state: running;
+}
+.glow-ball {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: radial-gradient(circle at 30% 30%, var(--tw-gradient-from), var(--tw-gradient-to));
+  box-shadow:
+    inset -4px -4px 8px rgba(255, 255, 255, 0.2),
+    inset 4px 4px 12px rgba(0, 0, 0, 0.1),
+    0 0 20px currentColor;
+}
+
+
+.glow-ball::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  width: 180%;
+  height: 180%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.2), transparent 60%);
+  transform: rotate(25deg);
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .glow-hover:hover {
+    box-shadow:
+      0 0 19px 22px currentColor,
+      0 0 25px 16px currentColor;
+    transition: box-shadow 0.7s ease-in-out;
+  }
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+body {
+  margin: 0;
+  background-color: #070825;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
