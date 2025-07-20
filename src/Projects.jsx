@@ -86,7 +86,7 @@ function Projects() {
           </span>{" "}
           🚀
         </motion.h2>
-        
+
         <div className="flex flex-col gap-20">
           {projects.map((project, index) => (
             <motion.div
