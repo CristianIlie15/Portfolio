@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-ubuntu {
+    font-family: "Ubuntu", sans-serif;
+    font-display: swap;
+  }
+
+  .font-lexend {
+    font-family: "Lexend Deca", sans-serif;
+    font-display: swap;
+  } 
+
+  .font-chonburi {
+    font-family: "Chonburi", cursive;
+    font-display: swap;
+  }
+
+  .bg-gradient-filler {
+    background-image: linear-gradient(to bottom, #020c2c, #031546, #05174c, #071a51, #091d57, #0b2062, #0e226c, #132477, #1f2589, #4a218d, #4120ab, #5516ba);
+  }
+
+  .bg-gradient2 {
+    background: linear-gradient(180deg, #5616BA, #0F043A);
+  }
+}
+
+@theme {
+  --color-primaryText: #f0f5f5 ;
+  --color-secondaryText: #f0fafc;
+  --color-text3 :#dfe4e6;
+  --color-boxColor1: #2a224a;
+  --color-boxColor2: #2f2f82;
+  --color-pink1: #bb44f3;
+  --color-blue1: #0865bd;
+}
+
+:root {
+  --gradient-main: linear-gradient(90deg, #0865bd, #663bd3, #f344c7);
+}
+
+.text-gradient-main {
+  background: var(--gradient-main);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-boxColor2 {
+  border: 2px solid var(--color-boxColor2);
+}
+
+body {
+  margin: 0;
+  background-color: #070825;
+}

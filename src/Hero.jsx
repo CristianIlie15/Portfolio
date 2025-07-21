@@ -23,11 +23,11 @@ function Hero() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.5, ease: "easeOut" }}
     >
+      {/* Background image - lazy loading to defer non-critical */}
       <img
         src={heroBackground}
         alt=""
-        loading="eager"
-        fetchpriority="high"
+        loading="lazy"
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
 

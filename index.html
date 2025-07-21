@@ -3,13 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/coding.svg" />
-    <link rel="preload" href="/assets/Ubuntu-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
-    <link rel="preload" href="/assets/Lora-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
+    <!-- Preload fonts used in Hero -->
+    <link
+      rel="preload"
+      href="/assets/Ubuntu-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/assets/Lora-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/assets/LexendDeca-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/assets/Chonburi-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cristian.dev</title>
+  <link rel="stylesheet" href="./src/criticalCSS.css" />
   </head>
   <body>
     <div id="root"></div>
+    <link rel="stylesheet" href="./src/index.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="./src/index.css" /></noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
