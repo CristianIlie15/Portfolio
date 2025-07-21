@@ -5,18 +5,22 @@
 @layer utilities {
   .font-ubuntu {
     font-family: "Ubuntu", sans-serif;
+    font-display: swap;
   }
 
   .font-lora {
     font-family: "Lora", serif;
+    font-display: swap;
   }
 
   .font-lexend {
     font-family: "Lexend Deca", sans-serif;
+    font-display: swap;
   } 
 
   .font-chonburi {
     font-family: "Chonburi", cursive;
+    font-display: swap;
   }
     .bg-gradient-filler {
     background-image: linear-gradient(to bottom, #020c2c, #031546, #05174c, #071a51, #091d57, #0b2062, #0e226c, #132477, #1f2589, #4a218d, #4120ab, #5516ba);
