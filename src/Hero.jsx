@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import useFramerTypewriter from "./Hero/Typewriter";
 import ShadowBubble from "./Hero/ShadowBubble";
-import heroBackground from "./Hero/heroBackground.jpg";
+import heroBackground from "./Hero/heroBackground.webp";
 import heroPic1 from "./Hero/heroPic.png";
 
 const dynamicWords = [
@@ -18,12 +18,19 @@ function Hero() {
 
   return (
     <motion.section
-      className="w-full min-h-[70vh] md:min-h-[80vh] bg-gray-90 py-12 px-6 relative overflow-hidden md:bg-[heroBackground]"
-      style={{ backgroundImage: `url(${heroBackground})` }}
+      className="w-full relative min-h-[70vh] md:min-h-[80vh] py-12 px-6 overflow-hidden bg-gray-90"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.5, ease: "easeOut" }}
     >
+      <img
+        src={heroBackground}
+        alt=""
+        loading="eager"
+        fetchpriority="high"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      />
+
       {/* Blur bubbles */}
       <ShadowBubble
         position="top-20 left-10"
@@ -49,7 +56,7 @@ function Hero() {
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          id ="hero"
+          id="hero"
         >
           <div className="flex items-start justify-start">
             <motion.h1
@@ -60,10 +67,10 @@ function Hero() {
               Hi!👋 I'm Cristian,
               <br className="block lg:hidden" />
               <span className="inline">
-                {" "}a <span className="">{animatedTypewriter}</span>
+                {" "}a <span>{animatedTypewriter}</span>
               </span>
 
-              {/* Ghost words (for layout stability) */}
+              {/* Ghost words */}
               <div className="absolute opacity-0 pointer-events-none top-0 left-0">
                 {dynamicWords.map((text, i) => (
                   <div key={i} className="font-mono">{text}</div>
@@ -73,7 +80,7 @@ function Hero() {
           </div>
 
           <motion.h3
-            className="text-xl md:text-2xl text-text3 max-w-xl px-2 lg:mx-0 mx-12 md:mt-10 md:mx-0 text-center md:text-left font-chonburi "
+            className="text-xl md:text-2xl text-text3 max-w-xl px-2 lg:mx-0 mx-12 md:mt-10 md:mx-0 text-center md:text-left font-chonburi"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
@@ -84,16 +91,27 @@ function Hero() {
           </motion.h3>
 
           <div className="flex gap-4 md:gap-6 lg:gap-8 mt-4">
-<button 
-  className="bg-gradient-to-r from-[#0b08bd] via-[#663bd3] to-[#bb44f3] rounded-2xl py-3 px-4 mt-4 md:mt-6 md:py-4 hover:scale-110 transition transform hover:cursor-pointer shadow-lg hover:shadow-[0_0_15px_#bb44f3] active:scale-95 active:shadow-inner">
-  <a className="text-md md:text-lg lg:text-xl text-primaryText font-ubuntu" href="#contact">Contact me😎</a>
-</button>
+            <button
+              className="bg-gradient-to-r from-[#0b08bd] via-[#663bd3] to-[#bb44f3] rounded-2xl py-3 px-4 mt-4 md:mt-6 md:py-4 hover:scale-110 transition transform hover:cursor-pointer shadow-lg hover:shadow-[0_0_15px_#bb44f3] active:scale-95 active:shadow-inner"
+            >
+              <a
+                className="text-md md:text-lg lg:text-xl text-primaryText font-ubuntu"
+                href="#contact"
+              >
+                Contact me😎
+              </a>
+            </button>
 
-<button 
-  className="bg-transparent border-pink1 rounded-lg py-3 px-6 mt-4 md:mt-6 md:py-4 hover:scale-110 transition transform hover:cursor-pointer border-2 hover:font-bold  active:scale-95 active:border-boxColor2 active:font-extrabold">
-  <a className="text-md md:text-lg lg:text-xl text-secondaryText font-ubuntu btn-download" href="../public/CV Ilie Claudiu-Cristian.docx">Download CV📰</a>
-</button>
-
+            <button
+              className="bg-transparent border-pink1 rounded-lg py-3 px-6 mt-4 md:mt-6 md:py-4 hover:scale-110 transition transform hover:cursor-pointer border-2 hover:font-bold active:scale-95 active:border-boxColor2 active:font-extrabold"
+            >
+              <a
+                className="text-md md:text-lg lg:text-xl text-secondaryText font-ubuntu btn-download"
+                href="../public/CV Ilie Claudiu-Cristian.docx"
+              >
+                Download CV📰
+              </a>
+            </button>
           </div>
         </motion.div>
 
@@ -108,7 +126,9 @@ function Hero() {
             <img
               src={heroPic1}
               alt="Despre mine"
-              className="object-cover w-full h-full "
+              loading="eager"
+              fetchpriority="high"
+              className="object-cover w-full h-full"
             />
           </div>
 

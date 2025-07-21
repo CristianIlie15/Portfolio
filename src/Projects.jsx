@@ -9,9 +9,9 @@ import {
 } from "react-icons/fa";
 import { SiTailwindcss, SiMongodb, SiJavascript } from "react-icons/si";
 import { startParticlesBackground } from "./Projects/ParticlesBackground";
-import twistTonic from "./Projects/twistTonic.png";
-import fbiMW from "./Projects/fbiMW.png";
-import slots from "./Projects/SlotsCasino.png";
+import twistTonic from "./Projects/twistTonic.webp";
+import fbiMW from "./Projects/fbiMW.webp";
+import slots from "./Projects/SlotsCasino.webp";
 
 const projects = [
   {
