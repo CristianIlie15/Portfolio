@@ -54,17 +54,6 @@ background: linear-gradient(180deg, #5616BA, #0F043A);
   -webkit-text-fill-color: transparent;
 }
 
-@keyframes pulse-soft {
-  0%, 100% {
-    transform: scale(1);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
-  }
-  50% {
-    transform: scale(1.03);
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-  }
-}
-
 .border-boxColor2 {
   border: 2px solid var(--color-boxColor2);
 }
@@ -112,7 +101,7 @@ background: linear-gradient(180deg, #5616BA, #0F043A);
 /* Bounce on container */
 .bounce {
   animation-name: softBounce;
-  animation-duration: 3.2s; /* poți schimba viteza aici */
+  animation-duration: 3.2s; 
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
@@ -133,7 +122,7 @@ background: linear-gradient(180deg, #5616BA, #0F043A);
   width: 100%;
 }
 
-/* start spi on hover */
+/* start spin on hover */
 .spin-wrapper:hover .spin {
   animation-play-state: running;
 }

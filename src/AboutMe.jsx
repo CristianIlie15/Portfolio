@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FaPaintBrush, FaCode, FaMobileAlt } from "react-icons/fa";
 import ServiceCard from "./About/ServiceCard";
 import ShadowBubble from "./Hero/ShadowBubble";
-import Img1 from "./About/aboutImage.jpg";
+import Img1 from "./About/aboutImage.webp";
 
 export default function AboutMe() {
   return (
@@ -12,7 +12,8 @@ export default function AboutMe() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-                   id ="about"
+      id="about"
+      aria-labelledby="about-heading"
     >
       <ShadowBubble
         position="top-[40%] left-15 md:top-12 lg:top-19 md:left-10"
@@ -24,7 +25,7 @@ export default function AboutMe() {
       />
 
       <div className="max-w-screen-2xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-24 px-0 lg:px-16 relative z-10">
-        {/* Imaginea */}
+        {/* Img */}
         <motion.div
           className="w-full md:w-[40%] flex justify-center md:justify-end"
           initial={{ opacity: 0, x: -20 }}
@@ -34,7 +35,11 @@ export default function AboutMe() {
           <div className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-[18%] overflow-hidden shadow-2xl bg-white border border-gray-300">
             <img
               src={Img1}
-              alt="About me image"
+              alt="Cristian Ilie smiling and coding"
+              loading="lazy"
+              fetchpriority="low"
+              width={320}
+              height={320}
               className="object-cover w-full h-full"
             />
           </div>
@@ -47,9 +52,12 @@ export default function AboutMe() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.35 }}
         >
-          <h1 className="text-4xl lg:text-5xl font-bold font-ubuntu text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-500">
+          <h2
+            id="about-heading"
+            className="text-4xl lg:text-5xl font-bold font-ubuntu text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-500"
+          >
             About Me
-          </h1>
+          </h2>
 
           <p className="text-text3 text-lg lg:text-2xl md:text-xl leading-relaxed max-w-xl font-chonburi px-2 md:px-0">
             I'm Cristian, a passionate frontend developer who loves crafting clean,
@@ -62,13 +70,16 @@ export default function AboutMe() {
         </motion.div>
       </div>
 
-      {/* Section */}
-      <div className="mt-24 w-full">
-        <h2 className="text-3xl md:text-4xl text-center font-bold font-ubuntu text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-pink-300 to-yellow-400 mb-16">
+      {/* Servicii */}
+      <div className="mt-24 w-full" aria-labelledby="services-heading">
+        <h3
+          id="services-heading"
+          className="text-3xl md:text-4xl text-center font-bold font-ubuntu text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-pink-300 to-yellow-400 mb-16"
+        >
           What I Do
-        </h2>
+        </h3>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-2 max-w-screen-xl mx-auto md:px-4 mb-2 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-2 max-w-screen-xl mx-auto md:px-4 mb-2">
           <ServiceCard
             icon={FaPaintBrush}
             title="UI/UX Design"

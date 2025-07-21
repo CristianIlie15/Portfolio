@@ -32,11 +32,10 @@ export default function TechStack() {
   }, []);
 
   const handleMouseEnterFactory = (name, color) => (e) => {
-    if (timeoutRefs.current[name]) return; // dacă deja rulează, nu porni altul
+    if (timeoutRefs.current[name]) return;
 
     const triggerLoop = () => {
       const rect = e.currentTarget.getBoundingClientRect();
-      // ajustare poziție pe pagină, ținând cont de scroll
       const x = rect.left + rect.width / 2 + window.scrollX;
       const y = rect.top + rect.height / 2 + window.scrollY;
 
@@ -50,10 +49,8 @@ export default function TechStack() {
   };
 
   const handleMouseLeaveFactory = (name) => () => {
-    if (timeoutRefs.current[name]) {
-      clearTimeout(timeoutRefs.current[name]);
-      delete timeoutRefs.current[name];
-    }
+    clearTimeout(timeoutRefs.current[name]);
+    delete timeoutRefs.current[name];
   };
 
   return (
@@ -67,38 +64,40 @@ export default function TechStack() {
         opacity={0.0675}
       />
 
-      <div className="max-w-screen-2xl mx-auto px-6 lg:px-26 mb-10 pb-10  " >
-        <h2 className="text-4xl lg:text-6xl md:text-5xl font-bold text-center mb-16 md:mb-24 lg:mb-30 font-ubuntu md:font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-pink-300 to-yellow-400 mb-16 " >
+      <div className="max-w-screen-2xl mx-auto px-6 lg:px-24 mb-10 pb-10">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-16 font-ubuntu bg-gradient-to-r from-purple-300 via-pink-300 to-yellow-400 text-transparent bg-clip-text">
           Tech Stack
         </h2>
 
-        {/* Mobile / small screens */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 justify-items-center md:hidden">
+        {/* Mobile & small screens */}
+        <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6 md:hidden" role="list">
           {techItems.map(({ name, color, Icon }, i) => (
-            <div
+            <li
               key={i}
-              className="flex items-center space-x-2 tech-glow-sm bg-[#eaf1f1] rounded-lg shadow-md px-4 py-2 cursor-default transform transition-transform duration-300 hover:cursor-pointer"
+              role="listitem"
+              className="flex items-center space-x-2 bg-[#eaf1f1] rounded-lg shadow-md px-4 py-2 cursor-default transition-transform duration-300 hover:scale-105"
               style={{
                 color,
                 border: `3px solid ${color}`,
                 boxShadow: `0 0 24px ${color}88`,
                 animation: "pulse-soft 3s ease-in-out infinite",
-                transition: "box-shadow 0.3s ease, transform 0.3s ease",
               }}
               title={name}
+              aria-label={name}
             >
-              <Icon size={40} />
+              <Icon size={36} />
               <span className="font-semibold text-gray-800">{name}</span>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
 
         {/* Medium & large screens */}
-        <div className="hidden md:flex flex-wrap justify-center gap-12 mt-12">
+        <ul className="hidden md:flex flex-wrap justify-center gap-12 mt-12" role="list">
           {techItems.map(({ name, color, Icon }, i) => (
-            <div
+            <li
               key={i}
-              className="w-24 h-24 lg:w-28 lg:h-28 rounded-full cursor-pointer select-none transform transition duration-300 hover:scale-110 shadow-xl flex flex-col items-center justify-center bounce"
+              role="listitem"
+              className="w-24 h-24 lg:w-28 lg:h-28 rounded-full cursor-pointer select-none transition duration-300 hover:scale-110 flex flex-col items-center justify-center shadow-xl"
               style={{
                 backgroundImage: `radial-gradient(circle at 17% 9%, ${color}, ${color}aa)`,
                 boxShadow: `
@@ -113,11 +112,12 @@ export default function TechStack() {
               onMouseEnter={handleMouseEnterFactory(name, color)}
               onMouseLeave={handleMouseLeaveFactory(name)}
               title={name}
+              aria-label={name}
             >
-              <Icon size={50} />
-            </div>
+              <Icon size={42} />
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

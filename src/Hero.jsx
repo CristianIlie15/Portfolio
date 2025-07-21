@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import useFramerTypewriter from "./Hero/Typewriter";
 import ShadowBubble from "./Hero/ShadowBubble";
 import heroBackground from "./Hero/heroBackground.webp";
-import heroPic1 from "./Hero/heroPic.png";
+import heroPic1 from "./Hero/heroPic.webp";
 
 const dynamicWords = [
   "Frontend Developer.💻",
@@ -107,7 +107,7 @@ function Hero() {
             >
               <a
                 className="text-md md:text-lg lg:text-xl text-secondaryText font-ubuntu btn-download"
-                href="../public/CV Ilie Claudiu-Cristian.docx"
+                href="/CV Ilie Claudiu-Cristian.docx"
               >
                 Download CV📰
               </a>
@@ -125,7 +125,7 @@ function Hero() {
           <div className="relative w-64 h-64 lg:w-96 lg:h-96 rounded-[30%_60%_60%_40%/65%_40%_60%_38%] bg-boxColor2 overflow-hidden shadow-lg lg:mt-20 mr-2 md:mr-0">
             <img
               src={heroPic1}
-              alt="Despre mine"
+              alt="Hero profile picture Cristian Ilie"
               loading="eager"
               fetchpriority="high"
               className="object-cover w-full h-full"
