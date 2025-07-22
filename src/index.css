@@ -1,9 +1,4 @@
-/* 
-  For best performance, move Google Fonts import to your HTML:
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Lora:wght@400;700&family=Lexend+Deca:wght@400;700&family=Chonburi&display=swap" rel="stylesheet">
-*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Lora:wght@400;700&family=Lexend+Deca:wght@400;700&family=Chonburi&display=swap');
 
 @import "tailwindcss";
 
