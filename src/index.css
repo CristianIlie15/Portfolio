@@ -1,25 +1,28 @@
-@import "tailwindcss";
-@import "./fonts.css";
+/* 
+  For best performance, move Google Fonts import to your HTML:
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Lora:wght@400;700&family=Lexend+Deca:wght@400;700&family=Chonburi&display=swap" rel="stylesheet">
+*/
 
+@import "tailwindcss";
+
+/* Font utility classes remain unchanged */
 @layer utilities {
   .font-ubuntu {
     font-family: "Ubuntu", sans-serif;
-    font-display: swap;
   }
 
   .font-lora {
     font-family: "Lora", serif;
-    font-display: swap;
   }
 
   .font-lexend {
     font-family: "Lexend Deca", sans-serif;
-    font-display: swap;
   }
 
   .font-chonburi {
     font-family: "Chonburi", cursive;
-    font-display: swap;
   }
 
   .bg-gradient-filler {
@@ -29,16 +32,6 @@
   .bg-gradient2 {
     background: linear-gradient(180deg, #5616ba, #0f043a);
   }
-}
-
-@theme {
-  --color-primaryText: #f0f5f5;
-  --color-secondaryText: #f0fafc;
-  --color-text3: #dfe4e6;
-  --color-boxColor1: #2a224a;
-  --color-boxColor2: #2f2f82;
-  --color-pink1: #bb44f3;
-  --color-blue1: #0865bd;
 }
 
 :root {
@@ -153,6 +146,10 @@
       0 0 25px 16px currentColor;
     transition: box-shadow 0.7s ease-in-out;
   }
+
+  .bg-gradient-filler, .bg-gradient2 {
+    background-attachment: scroll !important;
+  }
 }
 
 #particles-js {
@@ -164,7 +161,29 @@
   z-index: 0;
 }
 
+html {
+  font-size: 16px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background-color: #070825;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
+
+h1, .text-4xl {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+h2, .text-3xl {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+button, [role="button"], a {
+  cursor: pointer;
+}
+
